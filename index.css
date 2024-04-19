@@ -1,0 +1,67 @@
+body {
+    color: white;
+    animation: changeColor linear;
+    animation-timeline: scroll();
+}
+
+.b-bar {
+    position: fixed;
+    top:0;
+    height: 10px;
+    background-color: #295E8B;
+    width: 0%;
+    animation: changeWidth linear;
+    animation-timeline: scroll();
+}
+
+.b-image{
+    animation: translate linear both;
+    animation-timeline: view(block);
+    animation-range: cover 0% cover 100%;
+
+
+}
+
+.b-image-right{
+    animation: translate-right linear both;
+    animation-timeline: view(block);
+    animation-range: cover 0% cover 100%;
+
+}
+
+@keyframes translate {
+    0% {
+        transform: translateX(-50%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+
+@keyframes translate-right {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+@keyframes changeWidth {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+@keyframes changeColor {
+    0% {
+        background-color: #70cad1;
+    }
+    100% {
+        background-color: #295E8B;
+    }
+}
